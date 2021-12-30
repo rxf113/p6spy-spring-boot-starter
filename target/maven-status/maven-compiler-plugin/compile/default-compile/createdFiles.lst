@@ -1,0 +1,6 @@
+com\rxf113\p6spy\P6spyAutoConfiguration.class
+com\rxf113\p6spy\SmartPropertiesFieldsGenerator.class
+com\rxf113\p6spy\Constants.class
+com\rxf113\p6spy\P6spyProperties.class
+META-INF\spring-configuration-metadata.json
+com\rxf113\p6spy\CusP6spyConfigLoaderBeanPostProcessor.class

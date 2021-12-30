@@ -1,0 +1,182 @@
+{
+  "groups": [
+    {
+      "name": "p6spy.config",
+      "type": "com.rxf113.p6spy.P6spyProperties",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "p6spy.config.append",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.appender",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.autoflush",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.custom-log-message-format",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.database-dialect-binary-format",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.database-dialect-date-format",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.database-dialect-timestamp-format",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.dateformat",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.driverlist",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.exclude",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.excludebinary",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.excludecategories",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.execution-threshold",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.filter",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.include",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.jmx",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.jmx-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.jndicontextcustom",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.jndicontextfactory",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.jndicontextproviderurl",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.log-message-format",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.logfile",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.modulelist",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.outagedetection",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.outagedetectioninterval",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.realdatasource",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.realdatasourceclass",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.realdatasourceproperties",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.reloadproperties",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.reloadpropertiesinterval",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.sqlexpression",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.stacktrace",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.stacktraceclass",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    },
+    {
+      "name": "p6spy.config.use-nano-time",
+      "type": "java.lang.String",
+      "sourceType": "com.rxf113.p6spy.P6spyProperties"
+    }
+  ],
+  "hints": []
+}
