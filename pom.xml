@@ -7,7 +7,7 @@
     <!--    <groupId>com.rxf113</groupId>-->
     <groupId>io.github.rxf113</groupId>
     <artifactId>p6spy-spring-boot-starter</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <description>让 p6spy支持 springboot 的配置方式，直接在 bootstrap.yml 等配置文件配置，不用再写spy.properties</description>
 
     <properties>
