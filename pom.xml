@@ -5,16 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!--    <groupId>com.rxf113</groupId>-->
+    <name>p6spy-spring-boot-starter</name>
     <groupId>io.github.rxf113</groupId>
     <artifactId>p6spy-spring-boot-starter</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0-SNAPSHOT</version>
+    <url>https://github.com/rxf113/p6spy-spring-boot-starter</url>
     <description>让 p6spy支持 springboot 的配置方式，直接在 bootstrap.yml 等配置文件配置，不用再写spy.properties</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
-        <spring.comment.version>2.3.5.RELEASE</spring.comment.version>
+        <spring.comment.version>2.5.5</spring.comment.version>
         <p6spy.version>3.9.1</p6spy.version>
     </properties>
 
@@ -67,79 +69,89 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <version>3.3.1</version>
-                            <executions>
-                                <execution>
-                                    <phase>package</phase>
-                                    <goals>
-                                        <goal>jar</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                            <configuration>
-                                <charset>UTF-8</charset>
-                                <encoding>UTF-8</encoding>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-gpg-plugin</artifactId>
-                            <version>1.6</version>
-                            <executions>
-                                <execution>
-                                    <phase>verify</phase>
-                                    <goals>
-                                        <goal>sign</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <configuration>
-                                <skip>true</skip>
-                                <encoding>UTF-8</encoding>
-                                <source>${java.version}</source>
-                                <target>${java.version}</target>
-                                <compilerArgs>
-                                    <arg>-Xlint:deprecation</arg>
-                                </compilerArgs>
-                                <compilerArguments>
-                                    <bootclasspath>${java.home}\lib\rt.jar;${java.home}\lib\jce.jar</bootclasspath>
-                                </compilerArguments>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-source-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>attach-sources</id>
-                                    <phase>verify</phase>
-                                    <goals>
-                                        <goal>jar-no-fork</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.3.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <charset>UTF-8</charset>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <skip>true</skip>
+                            <encoding>UTF-8</encoding>
+                            <source>${java.version}</source>
+                            <target>${java.version}</target>
+                            <compilerArgs>
+                                <arg>-Xlint:deprecation</arg>
+                            </compilerArgs>
+                            <compilerArguments>
+                                <bootclasspath>${java.home}\lib\rt.jar;${java.home}\lib\jce.jar</bootclasspath>
+                            </compilerArguments>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.7</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
             </build>
             <distributionManagement>
                 <snapshotRepository>
                     <id>ossrh</id>
-<!--                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+                    <!--                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
                     <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
                     <id>ossrh</id>
-<!--                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+                    <!--                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
                     <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
