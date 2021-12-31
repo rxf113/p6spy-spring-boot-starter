@@ -42,7 +42,6 @@ p6spy:
     customLogMessageFormat: -%(currentTime)|%(executionTime)|%(category)|%(sql)
     logMessageFormat: com.p6spy.engine.spy.appender.CustomLineFormat    
 ```
-GIT
 对于超过500毫秒的sql，就会被记录在项目根目录的 slow.log 文件里
 
 ![image-20211230170320076](https://rxf113.xyz/static/image-20211230170320076.png)
